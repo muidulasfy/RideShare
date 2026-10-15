@@ -1,0 +1,79 @@
+/* ==========================================
+   PROFILE DROPDOWN
+   ========================================== */
+
+.profile,
+.profile-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   DROPDOWN MENU
+   ========================================== */
+
+.profile-dropdown {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    right: 0;
+
+    width: 140px;
+
+    background: white;
+
+    border: 1px solid #e0e5ee;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    padding: 6px 0;
+
+    display: none;
+
+    z-index: 1000;
+}
+
+
+/* ==========================================
+   SHOW DROPDOWN
+   ========================================== */
+
+.profile-dropdown.show {
+    display: block;
+}
+
+
+/* ==========================================
+   DROPDOWN ITEMS
+   ========================================== */
+
+.profile-dropdown a {
+    display: block;
+
+    padding: 10px 14px;
+
+    text-decoration: none;
+
+    color: #202b42;
+
+    font-size: 12px;
+
+    background: white;
+}
+
+
+.profile-dropdown a:hover {
+    background: #f0f5ff;
+}
+
+
+/* ==========================================
+   SIGN OUT
+   ========================================== */
+
+.profile-dropdown .signout {
+    color: #dc2626;
+}

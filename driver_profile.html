@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RideNest - Driver Profile</title>
+
+
+    <link
+        rel="stylesheet"
+        href="driver_profile.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="profile_dropdown.css"
+    >
+
+
+    <script>
+
+        fetch("session_check.php")
+
+        .then(response =>
+            response.json()
+        )
+
+        .then(data => {
+
+            if (!data.loggedIn) {
+
+                window.location.href =
+                    "login.html";
+
+            }
+
+        })
+
+        .catch(() => {
+
+            window.location.href =
+                "login.html";
+
+        });
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<div class="navbar">
+
+    <div class="logo">
+        RideNest
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="main_page.html">
+            Home
+        </a>
+
+        <a href="find_ride.html">
+            Find Ride
+        </a>
+
+        <a href="post_ride.html">
+            Post Ride
+        </a>
+
+        <a href="My Rides.html">
+            My Rides
+        </a>
+
+        <a href="chat.html">
+            Chat
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+    </div>
+
+
+    <div
+        class="profile-icon"
+        id="profileIcon"
+    >
+        S
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="main">
+
+
+    <!-- =====================================
+         DRIVER HEADER
+    ====================================== -->
+
+    <section class="driver-header">
+
+        <div class="driver-avatar">
+            <span id="driverInitial">
+                D
+            </span>
+        </div>
+
+
+        <div class="driver-main-info">
+
+            <h1 id="driverName">
+                Loading...
+            </h1>
+
+
+            <p class="driver-role">
+                Verified RideNest Driver
+            </p>
+
+
+            <div
+                class="rating-line"
+                id="ratingLine"
+            >
+                ★ No ratings yet
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         STATS
+    ====================================== -->
+
+    <section class="stats">
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <strong
+                    id="completedRides"
+                >
+                    0
+                </strong>
+
+                <span>
+                    Completed Rides
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ★
+            </div>
+
+            <div>
+
+                <strong
+                    id="averageRating"
+                >
+                    —
+                </strong>
+
+                <span>
+                    Average Rating
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                💬
+            </div>
+
+            <div>
+
+                <strong
+                    id="ratingCount"
+                >
+                    0
+                </strong>
+
+                <span>
+                    Reviews
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         DRIVER INFORMATION
+    ====================================== -->
+
+    <section class="info-card">
+
+        <h2>
+            Driver Information
+        </h2>
+
+
+        <div class="info-grid">
+
+
+            <div class="info-item">
+
+                <span>
+                    Vehicle Type
+                </span>
+
+                <strong
+                    id="vehicleType"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    Vehicle Model
+                </span>
+
+                <strong
+                    id="vehicleModel"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    Vehicle Number
+                </span>
+
+                <strong
+                    id="vehicleNumber"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    Gender
+                </span>
+
+                <strong
+                    id="driverGender"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         REVIEWS
+    ====================================== -->
+
+    <section class="reviews-section">
+
+        <div class="reviews-header">
+
+            <div>
+
+                <h2>
+                    Driver Reviews
+                </h2>
+
+                <p>
+                    Reviews from passengers
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="reviewsContainer"
+            class="reviews-container"
+        >
+
+            <div class="loading">
+                Loading reviews...
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="driver_profile.js"></script>
+
+<script src="profile_dropdown.js"></script>
+
+
+</body>
+
+</html>

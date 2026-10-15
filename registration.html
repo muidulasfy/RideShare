@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideNest - Register</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">
+            Ride<span>Nest</span>
+        </div>
+
+    </div>
+
+
+    <div class="page">
+
+        <div class="register-box">
+
+            <h1>Create your <span>RideNest</span> account</h1>
+
+            <p>Join using university information</p>
+
+
+            <div class="user-type">
+
+                <button class="type active" id="studentBtn" onclick="showStudent()">
+                    Student
+                </button>
+
+                <button class="type" id="driverBtn" onclick="showDriver()">
+                    Driver
+                </button>
+
+            </div>
+
+
+            <!-- Student Form -->
+
+            <form id="studentForm">
+
+                <h2>Student Registration</h2>
+
+                <p class="form-text">
+                    Sign up as a student to find or share rides.
+                </p>
+
+                <input type="text" id="name" placeholder="Full Name">
+
+                <input type="text" id="department" placeholder="Department">
+
+                <input type="text" id="phone" placeholder="Phone Number">
+
+                <input type="password" id="password" placeholder="Password">
+
+                <input type="password" id="confirm" placeholder="Confirm Password">
+
+
+                <div class="two-input">
+
+                    <input type="text" id="student" placeholder="Student ID">
+
+                    <input type="email" id="email" placeholder="University Email">
+
+                </div>
+
+
+                <div class="gender">
+
+                    <b>Gender</b>
+
+                    <label>
+                        <input type="radio" name="gender" value="Male">
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="Female">
+                        Female
+                    </label>
+
+                </div>
+
+
+                <button type="button" class="register-btn" onclick="registerStudent()">
+                    Register as Student
+                </button>
+
+            </form>
+
+
+            <!-- Driver Form -->
+
+            <form id="driverForm">
+
+                <h2>Driver Registration</h2>
+
+                <p class="form-text">
+                    Sign up as a driver to offer rides.
+                </p>
+
+                <input type="text" id="driverName" placeholder="Full Name">
+
+                <input type="text" id="driverPhone" placeholder="Phone Number">
+                <input type="email" id="driverEmail" placeholder="Email">
+
+                <input type="text" id="license" placeholder="Driving License Number">
+
+                <input type="text" id="vehicle" placeholder="Vehicle Number">
+            
+
+<select id="vehicleType">
+    <option value="">Select Vehicle Type</option>
+    <option value="Car">Car</option>
+    <option value="Bike">Bike</option>
+    <option value="CNG">CNG</option>
+    <option value="Microbus">Microbus</option>
+    <option value="Bus">Bus</option>
+</select>
+
+<input type="text" id="model" placeholder="Vehicle Model">
+
+            
+
+                <input type="password" id="driverPassword" placeholder="Password">
+
+                <input type="password" id="driverConfirm" placeholder="Confirm Password">
+
+
+                <div class="gender">
+
+                    <b>Gender</b>
+
+                    <label>
+                        <input type="radio" name="driverGender" value="Male">
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="driverGender" value="Female">
+                        Female
+                    </label>
+
+                </div>
+
+
+                <button type="button" class="register-btn" onclick="registerDriver()">
+                    Register as Driver
+                </button>
+
+            </form>
+
+
+            <div class="login">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="register.js"></script>
+
+</body>
+
+</html>

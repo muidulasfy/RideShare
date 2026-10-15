@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    color: #172033;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8fbff 0%,
+            #f3f7fd 100%
+        );
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 7%;
+
+    background: white;
+
+    border-bottom:
+        1px solid #e5edf7;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+
+    color: #2563eb;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-left: 15%;
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #475569;
+
+    padding: 8px 12px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+}
+
+
+.nav-links a:hover {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+.profile-icon {
+
+    margin-left: auto;
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding:
+        45px 0 80px;
+}
+
+
+/* =========================================
+   DRIVER HEADER
+========================================= */
+
+.driver-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 28px;
+
+    background: white;
+
+    border:
+        1px solid #e1eaf4;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(30, 64, 175, 0.06);
+
+    margin-bottom: 18px;
+}
+
+
+.driver-avatar {
+
+    width: 75px;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #60a5fa
+        );
+
+    color: white;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+.driver-main-info h1 {
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+
+.driver-role {
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+
+.rating-line {
+
+    color: #d97706;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.stat-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 20px;
+
+    background: white;
+
+    border:
+        1px solid #e1eaf4;
+
+    border-radius: 15px;
+}
+
+
+.stat-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-weight: bold;
+}
+
+
+.stat-card strong {
+
+    display: block;
+
+    font-size: 20px;
+
+    margin-bottom: 3px;
+}
+
+
+.stat-card span {
+
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.info-card {
+
+    background: white;
+
+    border:
+        1px solid #e1eaf4;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 18px;
+}
+
+
+.info-card h2,
+.reviews-section h2 {
+
+    font-size: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.info-item {
+
+    padding: 14px;
+
+    background: #f8fbff;
+
+    border-radius: 11px;
+}
+
+
+.info-item span {
+
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+
+.info-item strong {
+
+    font-size: 12px;
+
+    color: #334155;
+}
+
+
+/* =========================================
+   REVIEWS
+========================================= */
+
+.reviews-section {
+
+    background: white;
+
+    border:
+        1px solid #e1eaf4;
+
+    border-radius: 18px;
+
+    padding: 25px;
+}
+
+
+.reviews-header p {
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+.reviews-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.review-card {
+
+    padding: 16px;
+
+    background: #f8fbff;
+
+    border-radius: 12px;
+
+    border:
+        1px solid #edf2f7;
+}
+
+
+.review-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.review-top strong {
+
+    font-size: 12px;
+}
+
+
+.stars {
+
+    margin-top: 5px;
+
+    color: #f59e0b;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+.review-date {
+
+    color: #94a3b8;
+
+    font-size: 9px;
+}
+
+
+.review-text {
+
+    margin-top: 10px;
+
+    color: #475569;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NO REVIEWS
+========================================= */
+
+.no-reviews {
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: #64748b;
+}
+
+
+.no-review-icon {
+
+    font-size: 30px;
+
+    color: #f59e0b;
+
+    margin-bottom: 8px;
+}
+
+
+.no-reviews h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.no-reviews p {
+
+    font-size: 11px;
+
+    color: #94a3b8;
+}
+
+
+.loading {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+
+        padding: 10px 5%;
+
+        height: auto;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .nav-links {
+
+        order: 3;
+
+        width: 100%;
+
+        margin-left: 0;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        margin-top: 10px;
+
+    }
+
+
+    .main {
+
+        width: 92%;
+
+        padding-top: 30px;
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .driver-header {
+
+        padding: 20px;
+    }
+
+
+    .driver-avatar {
+
+        width: 60px;
+
+        height: 60px;
+
+        font-size: 22px;
+    }
+
+
+    .driver-main-info h1 {
+
+        font-size: 22px;
+    }
+
+}

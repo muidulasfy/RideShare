@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        RideNest - My Bookings
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="My Rides.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="profile_dropdown.css"
+    >
+
+
+    <!-- =========================================
+         ROLE CHECK
+         ========================================= -->
+
+    <script>
+
+        fetch("session_check.php")
+
+        .then(function (response) {
+
+            return response.json();
+
+        })
+
+        .then(function (data) {
+
+
+            if (!data.loggedIn) {
+
+                window.location.href =
+                    "login.html";
+
+                return;
+
+            }
+
+
+            if (data.role === "driver") {
+
+                window.location.href =
+                    "my_posted_rides.html";
+
+                return;
+
+            }
+
+
+            if (data.role === "admin") {
+
+                window.location.href =
+                    "admin_dashboard.php";
+
+                return;
+
+            }
+
+        })
+
+        .catch(function (error) {
+
+            console.log(error);
+
+            window.location.href =
+                "login.html";
+
+        });
+
+    </script>
+
+
+    <script src="role_guard.js"></script>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- =========================================
+         NAVBAR
+         ========================================= -->
+
+    <header class="top-menu">
+
+
+        <div class="logo">
+            RideNest
+        </div>
+
+
+        <div class="menu">
+
+            <a href="main_page.html">
+                Home
+            </a>
+
+            <a href="find_ride.html">
+                Find Ride
+            </a>
+
+            <a href="post_ride.html">
+                Post Ride
+            </a>
+
+            <a
+                href="My Rides.html"
+                class="active"
+            >
+                My Rides
+            </a>
+
+            <a href="chat.html">
+                Chat
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+
+        <div class="profile-icon">
+            &#128100;
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN
+         ========================================= -->
+
+    <main class="content">
+
+
+        <h1>
+            My bookings
+        </h1>
+
+
+        <p class="subtitle">
+
+            Track upcoming and previous
+            ride bookings.
+
+        </p>
+
+
+        <!-- =====================================
+             TABS
+             ===================================== -->
+
+        <div class="tabs">
+
+
+            <button
+                class="tab active"
+                type="button"
+            >
+                Upcoming
+            </button>
+
+
+            <button
+                class="tab"
+                type="button"
+            >
+                Past
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =====================================
+             BOOKING LIST
+             ===================================== -->
+
+        <div class="booking-list">
+
+            <p>
+                Loading bookings...
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================
+     DRIVER RATING MODAL
+     ========================================= -->
+
+<div
+    id="ratingModal"
+    class="rating-modal"
+>
+
+
+    <div class="rating-box">
+
+
+        <button
+            type="button"
+            class="rating-close"
+            id="closeRatingModal"
+        >
+            ×
+        </button>
+
+
+        <h2>
+            Rate your driver
+        </h2>
+
+
+        <p class="rating-driver-name">
+            How was your ride?
+        </p>
+
+
+        <!-- STARS -->
+
+        <div
+            class="star-container"
+            id="starContainer"
+        >
+
+
+            <button
+                type="button"
+                class="star"
+                data-rating="1"
+            >
+                ★
+            </button>
+
+
+            <button
+                type="button"
+                class="star"
+                data-rating="2"
+            >
+                ★
+            </button>
+
+
+            <button
+                type="button"
+                class="star"
+                data-rating="3"
+            >
+                ★
+            </button>
+
+
+            <button
+                type="button"
+                class="star"
+                data-rating="4"
+            >
+                ★
+            </button>
+
+
+            <button
+                type="button"
+                class="star"
+                data-rating="5"
+            >
+                ★
+            </button>
+
+
+        </div>
+
+
+        <p
+            class="rating-text"
+            id="ratingText"
+        >
+            Select a rating
+        </p>
+
+
+        <!-- REVIEW -->
+
+        <textarea
+            id="driverReview"
+            placeholder="Write a review about your experience..."
+            maxlength="1000"
+        ></textarea>
+
+
+        <div class="review-counter">
+            Maximum 1000 characters
+        </div>
+
+
+        <button
+            type="button"
+            id="submitRating"
+            class="submit-rating-btn"
+        >
+            Submit Review
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="My Rides.js"></script>
+
+<script src="profile_dropdown.js"></script>
+
+
+</body>
+
+</html>

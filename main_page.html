@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RideNest</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="main_page.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="logo">RideNest</div>
+
+        <a href="find_ride.html" class="protected-link">
+            Find Ride
+        </a>
+
+        <a href="post_ride.html" class="protected-link">
+            Post Ride
+        </a>
+
+        <a href="My Rides.html" class="protected-link">
+            My Rides
+        </a>
+
+        <a href="chat.html" class="protected-link">
+            Chat
+        </a>
+
+        <a href="profile.html" class="protected-link">
+            Profile
+        </a>
+
+        <!-- Logged out -->
+        <div class="auth" id="loggedOutAuth">
+            <a href="login.html" class="login">Login</a>
+            <a href="registration.html" class="signup">Sign up</a>
+        </div>
+
+        <!-- Logged in -->
+        <div class="auth" id="loggedInAuth" style="display: none;">
+            <a href="profile.html" class="login">Profile</a>
+            <a href="logout.php" class="signup">Logout</a>
+        </div>
+
+    </div>
+
+
+    <div class="hero">
+
+        <div class="hero-left">
+
+            <div class="badge">
+                <span class="badge-dot">•</span>
+                University Campus Carpooling
+            </div>
+
+            <h1>
+                Smarter Commutes.
+                <span>Together.</span>
+            </h1>
+
+            <p class="description">
+                RideNest connects university students and staff for
+                affordable, eco-friendly carpooling. Share rides, split
+                costs, and build a greener campus community.
+            </p>
+
+            <div class="buttons">
+
+                <button class="find-button btn">
+                    <span class="search-icon">●</span>
+                    Find a Ride
+                </button>
+
+                <button class="post-button btn">
+                    <span class="plus">+</span>
+                    Post a Ride
+                </button>
+
+            </div>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <h2 class="number">2400+</h2>
+                    <p class="para">Active Riders</p>
+                </div>
+
+                <div class="stat">
+                    <h2 class="number">480+</h2>
+                    <p class="para">Daily Rides</p>
+                </div>
+
+                <div class="stat">
+                    <h2 class="number">4.8★</h2>
+                    <p class="para">Avg Rating</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-right">
+
+            <div class="image-container">
+                <img src="pic1.jpg.png" alt="University Campus">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="part-1">
+
+        <div class="p1-heading" style="text-align: center;">
+            <p class="p1-para">Why RideNest</p>
+            <h2 style="font-size: 25px;">Everything you need to ride smart</h2>
+        </div>
+
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21s7-5.5 7-12a7 7 0 1 0-14 0c0 6.5 7 12 7 12z"></path>
+                        <circle cx="12" cy="9" r="2.5"></circle>
+                    </svg>
+                </div>
+
+                <div class="feature-text">
+                    <h3>Campus Routes</h3>
+                    <p>
+                        Smart routes matching between university
+                        dorms, faculties, and off-campus areas.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3l7 3v6c0 4.8-3 7.8-7 10-4-2.2-7-5.2-7-10V6l7-3z"></path>
+                    </svg>
+                </div>
+
+                <div class="feature-text">
+                    <h3>Verified Students</h3>
+                    <p>
+                        Only verified university students and staff.
+                        Student ID required for registration.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon dollar-icon">
+                    <span>$</span>
+                </div>
+
+                <div class="feature-text">
+                    <h3 style="font-size: 11px;">Affordable Fares</h3>
+                    <p>
+                        Split costs fairly. Save money on your daily
+                        commute without sacrificing comfort.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="12,3 19,7 19,16 12,21 5,17 5,8"></polygon>
+                    </svg>
+                </div>
+
+                <div class="feature-text">
+                    <h3>Eco-Friendly</h3>
+                    <p>
+                        Reduce your carbon footprint. Fewer cars on
+                        the road means a greener campus.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 5h14v10H9l-4 4V5z"></path>
+                    </svg>
+                </div>
+
+                <div class="feature-text">
+                    <h3>In-App Chat</h3>
+                    <p>
+                        Coordinate with your driver or passenger
+                        directly through the built-in messenger.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="12,3 14.8,9 21,9.5 16.2,13.5 17.7,20 12,16.5 6.3,20 7.8,13.5 3,9.5 9.2,9"></polygon>
+                    </svg>
+                </div>
+
+                <div class="feature-text">
+                    <h3>Ratings Reviews</h3>
+                    <p>
+                        Community trust built on mutual reviews after
+                        every completed ride.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="part-2">
+
+        <div class="p2-heading" style=" text-align: center;">
+            <p class="p2-para">How It Works</p>
+            <h2 style="font-size: 26px;">Ride together in 3 simple steps</h2>
+        </div>
+
+
+        <div class="steps-container">
+
+            <div class="step-card step-one">
+                <p class="step-number">STEP 01</p>
+                <h3 class="sc">Post a Ride</h3>
+                <p class="step-description">
+                    Drivers post their route, time, and available seats.
+                </p>
+            </div>
+
+
+            <div class="step-card step-two">
+                <p class="step-number">STEP 02</p>
+                <h3 class="sc">Book a Seat</h3>
+                <p class="step-description">
+                    Passengers browse and book the perfect ride for
+                    their schedule.
+                </p>
+            </div>
+
+
+            <div class="step-card step-three">
+                <p class="step-number">STEP 03</p>
+                <h3 class="sc">Travel Together</h3>
+                <p class="step-description">
+                    Meet at the pickup point and enjoy a shared
+                    comfortable commute.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="cta-box">
+
+            <div class="cta-text">
+                <h2 style=" font-size: 25px;">Ready to join RideNest?</h2>
+                <p>Join 2,400+ students commuting smarter every day.</p>
+            </div>
+
+            <div class="cta-buttons">
+                <button class="get-started cta-btn">Get Started Free</button>
+                <button class="browse-rides cta-btn">Browse Rides</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <h2>RideNest</h2>
+                <p>
+                    Making campus commutes affordable, eco-
+                    friendly, and community-driven for students
+                    and staff.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Platform</h3>
+                <a class="fc" href="#">Find Ride</a>
+                <a class="fc" href="#">Post Ride</a>
+                <a class="fc" href="#">My Bookings</a>
+                <a class="fc" href="#">Ride History</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Community</h3>
+                <a class="fc" href="#">About Us</a>
+                <a class="fc" href="#">Safety</a>
+                <a class="fc" href="#">Blog</a>
+                <a class="fc" href="#">Help Center</a>
+            </div>
+
+            <div class="footer-column ">
+                <h3>Legal</h3>
+                <a class="fc" href="#">Privacy Policy</a>
+                <a class="fc" href="#">Terms of Use</a>
+                <a class="fc" href="#">Cookie Policy</a>
+                <a class="fc" href="#">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p style=" font-size: 9px;">© 2025 RideNest. All rights reserved.</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var loggedOutAuth = document.getElementById("loggedOutAuth");
+            var loggedInAuth = document.getElementById("loggedInAuth");
+            var protectedLinks = document.querySelectorAll(".protected-link");
+
+            fetch("session_check.php", {
+                method: "GET",
+                cache: "no-store"
+            })
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Session check failed");
+                }
+                return response.json();
+            })
+            .then(function (data) {
+
+                if (data.loggedIn === true) {
+                    loggedOutAuth.style.display = "none";
+                    loggedInAuth.style.display = "flex";
+
+                    protectedLinks.forEach(function (link) {
+                        link.addEventListener("click", function () {
+                            // Logged-in users can open the page normally.
+                        });
+                    });
+
+                } else {
+                    loggedOutAuth.style.display = "flex";
+                    loggedInAuth.style.display = "none";
+
+                    protectedLinks.forEach(function (link) {
+                        link.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            window.location.href = "login.html";
+                        });
+                    });
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+
+                loggedOutAuth.style.display = "flex";
+                loggedInAuth.style.display = "none";
+
+                protectedLinks.forEach(function (link) {
+                    link.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        window.location.href = "login.html";
+                    });
+                });
+            });
+
+
+            // Hero buttons
+            var findButton = document.querySelector(".find-button");
+            var postButton = document.querySelector(".post-button");
+            var getStartedButton = document.querySelector(".get-started");
+            var browseButton = document.querySelector(".browse-rides");
+
+            function openProtectedPage(page) {
+                fetch("session_check.php", { cache: "no-store" })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    if (data.loggedIn === true) {
+                        window.location.href = page;
+                    } else {
+                        window.location.href = "login.html";
+                    }
+                })
+                .catch(function () {
+                    window.location.href = "login.html";
+                });
+            }
+
+            if (findButton) {
+                findButton.addEventListener("click", function () {
+                    openProtectedPage("find_ride.html");
+                });
+            }
+
+            if (postButton) {
+                postButton.addEventListener("click", function () {
+                    openProtectedPage("post_ride.html");
+                });
+            }
+
+            if (getStartedButton) {
+                getStartedButton.addEventListener("click", function () {
+                    window.location.href = "registration.html";
+                });
+            }
+
+            if (browseButton) {
+                browseButton.addEventListener("click", function () {
+                    openProtectedPage("find_ride.html");
+                });
+            }
+
+        });
+    </script>
+
+</body>
+</html>

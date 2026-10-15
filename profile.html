@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RideNest - Profile</title>
+
+
+    <link
+        rel="stylesheet"
+        href="profile.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="profile_dropdown.css"
+    >
+
+
+    <script>
+
+        fetch("session_check.php")
+
+            .then(function (response) {
+
+                return response.json();
+
+            })
+
+            .then(function (data) {
+
+                if (!data.loggedIn) {
+
+                    window.location.href =
+                        "login.html";
+
+                    return;
+
+                }
+
+            })
+
+            .catch(function (error) {
+
+                console.log(error);
+
+                window.location.href =
+                    "login.html";
+
+            });
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<div class="navbar">
+
+
+    <div class="logo">
+        RideNest
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="main_page.html">
+            Home
+        </a>
+
+        <a href="find_ride.html">
+            Find Ride
+        </a>
+
+        <a href="post_ride.html">
+            Post Ride
+        </a>
+
+        <a href="My Rides.html">
+            My Rides
+        </a>
+
+        <a href="chat.html">
+            Chat
+        </a>
+
+        <a
+            href="profile.html"
+            class="active"
+        >
+            Profile
+        </a>
+
+    </div>
+
+
+    <div class="profile-icon">
+        ♟
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="profile-page">
+
+
+    <!-- =====================================
+         PREMIUM PROFILE HEADER
+    ====================================== -->
+
+    <section class="hero-profile">
+
+
+        <div class="profile-main">
+
+
+            <div class="large-avatar">
+                <span id="userInitial">
+                    U
+                </span>
+            </div>
+
+
+            <div class="profile-text">
+
+                <div class="name-line">
+
+                    <h1 id="profileName">
+                        Loading...
+                    </h1>
+
+                    <span
+                        id="roleBadge"
+                        class="role-badge"
+                    >
+                        Student
+                    </span>
+
+                </div>
+
+
+                <p
+                    id="profileDepartment"
+                    class="department"
+                >
+                    Loading department...
+                </p>
+
+
+                <p
+                    id="profilePhone"
+                    class="phone"
+                >
+                    Loading phone...
+                </p>
+
+
+                <div class="verified">
+
+                    <span class="verified-dot">
+                        ✓
+                    </span>
+
+                    Verified RideNest member
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-actions">
+
+            <a
+                href="My Rides.html"
+                class="primary-action"
+            >
+                My Rides
+            </a>
+
+            <a
+                href="chat.html"
+                class="secondary-action"
+            >
+                Messages
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         STATISTICS
+    ====================================== -->
+
+    <section class="stats-grid">
+
+
+        <div class="premium-stat blue">
+
+            <div class="stat-icon">
+                🚗
+            </div>
+
+            <div>
+
+                <span>
+                    Available Rides
+                </span>
+
+                <strong id="availableRides">
+                    0
+                </strong>
+
+                <small>
+                    Currently available
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="premium-stat">
+
+            <div class="stat-icon">
+                🎫
+            </div>
+
+            <div>
+
+                <span>
+                    My Bookings
+                </span>
+
+                <strong id="totalBookings">
+                    0
+                </strong>
+
+                <small>
+                    Total bookings
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="premium-stat blue">
+
+            <div class="stat-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <span>
+                    Completed Trips
+                </span>
+
+                <strong id="completedTrips">
+                    0
+                </strong>
+
+                <small>
+                    Successfully completed
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="premium-stat">
+
+            <div class="stat-icon">
+                ★
+            </div>
+
+            <div>
+
+                <span>
+                    My Rating
+                </span>
+
+                <strong id="myRating">
+                    —
+                </strong>
+
+                <small id="ratingCount">
+                    No ratings yet
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         QUICK ACTIONS + ACCOUNT
+    ====================================== -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="dashboard-card">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        QUICK ACCESS
+                    </span>
+
+                    <h2>
+                        Your RideNest
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+
+                <a
+                    href="find_ride.html"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon blue-icon">
+                        🔍
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Find a Ride
+                        </h3>
+
+                        <p>
+                            Search available rides
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="My Rides.html"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon purple-icon">
+                        🎫
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            My Bookings
+                        </h3>
+
+                        <p>
+                            Manage your trips
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="chat.html"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon green-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Messages
+                        </h3>
+
+                        <p>
+                            Chat with drivers
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="find_ride.html"
+                    class="quick-card"
+                >
+
+                    <div class="quick-icon orange-icon">
+                        ⭐
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Driver Ratings
+                        </h3>
+
+                        <p>
+                            View your ride ratings
+                        </p>
+
+                    </div>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ACCOUNT STATUS -->
+
+        <div class="dashboard-card account-card">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ACCOUNT
+                    </span>
+
+                    <h2>
+                        Account Status
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <div class="status-symbol">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Verified Account
+                    </strong>
+
+                    <p>
+                        Your RideNest account is active.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <div class="status-symbol blue-status">
+                    🛡
+                </div>
+
+                <div>
+
+                    <strong>
+                        Safety Protected
+                    </strong>
+
+                    <p>
+                        Ride with verified members.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <div class="status-symbol purple-status">
+                    ★
+                </div>
+
+                <div>
+
+                    <strong>
+                        Community Member
+                    </strong>
+
+                    <p>
+                        Help build a trusted campus.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         DRIVER INFORMATION
+    ====================================== -->
+
+    <section
+        id="driverSection"
+        class="dashboard-card driver-section"
+        style="display: none;"
+    >
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    DRIVER ACCOUNT
+                </span>
+
+                <h2>
+                    Driver Information
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="driver-grid">
+
+
+            <div class="driver-detail">
+
+                <span>
+                    Vehicle Type
+                </span>
+
+                <strong id="vehicleType">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <div class="driver-detail">
+
+                <span>
+                    Vehicle Model
+                </span>
+
+                <strong id="vehicleModel">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <div class="driver-detail">
+
+                <span>
+                    Vehicle Number
+                </span>
+
+                <strong id="vehicleNumber">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <div class="driver-detail">
+
+                <span>
+                    Completed Rides
+                </span>
+
+                <strong id="driverCompletedRides">
+                    0
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+        <a
+            href="#"
+            id="viewOwnDriverProfile"
+            class="driver-profile-btn"
+        >
+            View Driver Profile →
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         RECENT ACTIVITY
+    ====================================== -->
+
+    <section class="dashboard-card activity-card">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    RECENT ACTIVITY
+                </span>
+
+                <h2>
+                    Your latest rides
+                </h2>
+
+            </div>
+
+            <a
+                href="My Rides.html"
+                class="view-all"
+            >
+                View all
+            </a>
+
+        </div>
+
+
+        <div id="activityContainer">
+
+            <div class="activity-loading">
+                Loading activity...
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         RECOMMENDED
+    ====================================== -->
+
+    <section class="recommended-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    RIDE MORE
+                </span>
+
+                <h2>
+                    Explore RideNest
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+            <a
+                href="find_ride.html"
+                class="feature-card feature-blue"
+            >
+
+                <span class="feature-icon">
+                    🚗
+                </span>
+
+                <div>
+
+                    <h3>
+                        Find your next ride
+                    </h3>
+
+                    <p>
+                        Discover available campus rides
+                        around you.
+                    </p>
+
+                </div>
+
+                <span class="feature-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="chat.html"
+                class="feature-card feature-purple"
+            >
+
+                <span class="feature-icon">
+                    💬
+                </span>
+
+                <div>
+
+                    <h3>
+                        Stay connected
+                    </h3>
+
+                    <p>
+                        Message drivers before
+                        your journey.
+                    </p>
+
+                </div>
+
+                <span class="feature-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="My Rides.html"
+                class="feature-card feature-green"
+            >
+
+                <span class="feature-icon">
+                    ✓
+                </span>
+
+                <div>
+
+                    <h3>
+                        Track your journeys
+                    </h3>
+
+                    <p>
+                        View upcoming and completed
+                        rides.
+                    </p>
+
+                </div>
+
+                <span class="feature-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script src="profile.js"></script>
+
+<script src="profile_dropdown.js"></script>
+
+
+</body>
+
+</html>

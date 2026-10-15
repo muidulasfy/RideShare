@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride History</title>
+    <link rel="stylesheet" href="ride_history.css">
+    <script>
+fetch("session_check.php")
+.then(response => response.json())
+.then(data => {
+
+    if (!data.loggedIn) {
+        window.location.href = "login.html";
+    }
+
+})
+.catch(error => {
+    console.log(error);
+    window.location.href = "login.html";
+});
+</script>
+<link rel="stylesheet" href="profile_dropdown.css">
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="logo">RideNest</div>
+
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="find_ride.html">Find Ride</a>
+        <a href="post_ride.html">Post Ride</a>
+        <a href="#" class="active">My Rides</a>
+        <a href="chat.html">Chat</a>
+        <a href="profile.html">Profile</a>
+    </div>
+
+    <div class="profile">S</div>
+
+</div>
+
+
+<div class="main">
+
+    <h1>Ride history</h1>
+
+    <p class="subtitle">Review completed and cancelled trips.</p>
+
+
+    <div class="filters">
+        <button class="all">All</button>
+        <button>Completed</button>
+        <button>Cancelled</button>
+    </div>
+
+
+    <div class="ride blue">
+
+        <div>
+            <b>Completed • Arif Rahman</b>
+            <p>Dhanmondi → United International University</p>
+            <p>22 Jul 2026 • 8:00 AM</p>
+            <i>Review</i>
+        </div>
+
+<button class="delete" onclick="deleteRide(this)">▥</button>
+    </div>
+
+
+    <div class="ride">
+
+        <div>
+            <b>Completed • Sadia Khan</b>
+            <p>Uttara → BRAC University</p>
+            <p>18 Jul 2026 • 8:30 AM</p>
+            <i>Review</i>
+        </div>
+
+<button class="delete" onclick="deleteRide(this)">▥</button>
+    </div>
+
+
+    <div class="ride blue">
+
+        <div>
+            <b>Cancelled • Tanvir Ahmed</b>
+            <p>Mirpur 10 → North south University</p>
+            <p>12 Jul 2026 • 9:00 AM</p>
+            <i>Cancelled by driver</i>
+        </div>
+
+<button class="delete" onclick="deleteRide(this)">▥</button>
+    </div>
+
+</div>
+<script src="ride_history.js"></script>
+<script src="profile_dropdown.js"></script>
+</body>
+</html>

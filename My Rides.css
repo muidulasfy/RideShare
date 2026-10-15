@@ -1,0 +1,1021 @@
+/* =========================================
+   RIDENEST - MY RIDES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8ff;
+    color: #17233c;
+    min-height: 100vh;
+}
+
+
+.page {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.top-menu {
+
+    height: 68px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e4eaf2;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 7%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    box-shadow:
+        0 3px 18px
+        rgba(23, 80, 150, 0.06);
+}
+
+
+.logo {
+
+    color: #1769ed;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    margin-right: 40px;
+}
+
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.menu a {
+
+    color: #64748b;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    padding: 9px 12px;
+
+    border-radius: 9px;
+
+    transition: 0.25s ease;
+}
+
+
+.menu a:hover {
+
+    color: #1769ed;
+
+    background: #eef5ff;
+}
+
+
+.menu a.active {
+
+    color: #1769ed;
+
+    background: #eaf2ff;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PROFILE ICON
+========================================= */
+
+.profile-icon {
+
+    width: 37px;
+
+    height: 37px;
+
+    margin-left: auto;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1769ed,
+            #4f8df7
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px
+        rgba(23, 105, 237, 0.18);
+
+    transition: 0.25s ease;
+}
+
+
+.profile-icon:hover {
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: 40px auto;
+}
+
+
+.content h1 {
+
+    color: #17233c;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+
+    color: #7b8798;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.tabs {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+
+.tab {
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 10px 18px;
+
+    background: #eaf2ff;
+
+    color: #1769ed;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.tab:hover {
+
+    background: #dceaff;
+
+    transform: translateY(-1px);
+}
+
+
+.tab.active {
+
+    background: #1769ed;
+
+    color: white;
+
+    box-shadow:
+        0 6px 15px
+        rgba(23, 105, 237, 0.18);
+}
+
+
+/* =========================================
+   BOOKING LIST
+========================================= */
+
+.booking-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   BOOKING CARD
+========================================= */
+
+.booking-card {
+
+    min-height: 125px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e8f2;
+
+    border-radius: 16px;
+
+    padding: 20px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 7px 24px
+        rgba(31, 76, 130, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.booking-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 4px;
+
+    height: 100%;
+
+    background: #1769ed;
+
+    transform: scaleY(0);
+
+    transition: 0.25s ease;
+}
+
+
+.booking-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #c9dcf8;
+
+    box-shadow:
+        0 12px 30px
+        rgba(23, 105, 237, 0.09);
+}
+
+
+.booking-card:hover::before {
+
+    transform: scaleY(1);
+}
+
+
+/* =========================================
+   PENDING
+========================================= */
+
+.pending-card {
+
+    background: #fbfdff;
+
+    border-color: #dbe8f8;
+}
+
+
+.pending-card::before {
+
+    background: #f59e0b;
+}
+
+
+/* =========================================
+   BOOKING INFORMATION
+========================================= */
+
+.booking-info {
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.booking-info h3 {
+
+    color: #17233c;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+.booking-info p {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    margin-bottom: 2px;
+}
+
+
+.tip-info {
+
+    color: #2563eb !important;
+
+    font-size: 12px !important;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.booking-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   MESSAGE BUTTON
+========================================= */
+
+.message-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 120px;
+
+    height: 38px;
+
+    padding: 0 15px;
+
+    border: 1px solid #cbdcf5;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #1769ed;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+
+.message-btn:hover {
+
+    background: #eef5ff;
+
+    border-color: #a9c8f4;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CANCEL BUTTON
+========================================= */
+
+.delete-btn {
+
+    width: 38px;
+
+    height: 38px;
+
+    border: 1px solid #f0dada;
+
+    border-radius: 9px;
+
+    background: #fff7f7;
+
+    color: #dc4444;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.25s ease;
+}
+
+
+.delete-btn:hover {
+
+    background: #ffeaea;
+
+    border-color: #efbebe;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   RATE DRIVER BUTTON
+========================================= */
+
+.rate-driver-btn {
+
+    height: 38px;
+
+    padding: 0 14px;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 9px;
+
+    background: #fff7ed;
+
+    color: #ea580c;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.rate-driver-btn:hover {
+
+    background: #ffedd5;
+
+    border-color: #fdba74;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   RATED LABEL
+========================================= */
+
+.rated-label {
+
+    height: 38px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 0 13px;
+
+    border-radius: 9px;
+
+    background: #ecfdf5;
+
+    border: 1px solid #bbf7d0;
+
+    color: #15803d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.empty-bookings {
+
+    background: white;
+
+    border: 1px solid #e1e8f2;
+
+    border-radius: 15px;
+
+    padding: 45px 20px;
+
+    text-align: center;
+
+    color: #7b8798;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 7px 22px
+        rgba(31, 76, 130, 0.05);
+}
+
+
+.booking-list > p {
+
+    background: #ffffff;
+
+    border: 1px solid #e1e8f2;
+
+    border-radius: 15px;
+
+    padding: 45px 20px;
+
+    text-align: center;
+
+    color: #7b8798;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RATING MODAL
+========================================= */
+
+.rating-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(15, 23, 42, 0.55);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+
+.rating-modal.show {
+
+    display: flex;
+}
+
+
+.rating-box {
+
+    width: 430px;
+
+    max-width: 100%;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 50px
+        rgba(15, 23, 42, 0.20);
+
+    text-align: center;
+
+    animation:
+        ratingBoxIn 0.2s ease;
+}
+
+
+@keyframes ratingBoxIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(10px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+}
+
+
+.rating-close {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.rating-close:hover {
+
+    background: #e2e8f0;
+}
+
+
+.rating-box h2 {
+
+    margin-bottom: 7px;
+
+    font-size: 21px;
+
+    color: #172033;
+}
+
+
+.rating-driver-name {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.star-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-bottom: 3px;
+}
+
+
+.star {
+
+    border: none;
+
+    background: transparent;
+
+    color: #cbd5e1;
+
+    font-size: 38px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    line-height: 1;
+
+    transition: 0.15s ease;
+}
+
+
+.star:hover {
+
+    transform: scale(1.12);
+}
+
+
+.star.selected {
+
+    color: #f59e0b;
+}
+
+
+.rating-text {
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    margin:
+        5px 0 18px;
+}
+
+
+/* =========================================
+   REVIEW
+========================================= */
+
+#driverReview {
+
+    width: 100%;
+
+    height: 100px;
+
+    resize: none;
+
+    border:
+        1px solid #dbe3ed;
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    color: #17233c;
+}
+
+
+#driverReview:focus {
+
+    border-color: #2563eb;
+}
+
+
+.review-counter {
+
+    text-align: right;
+
+    margin-top: 5px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   SUBMIT
+========================================= */
+
+.submit-rating-btn {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.submit-rating-btn:hover {
+
+    background: #1d4ed8;
+}
+
+
+.submit-rating-btn:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .top-menu {
+
+        padding: 0 20px;
+    }
+
+
+    .logo {
+
+        margin-right: 15px;
+    }
+
+
+    .menu {
+
+        gap: 2px;
+    }
+
+
+    .menu a {
+
+        padding: 8px 7px;
+    }
+
+
+    .content {
+
+        width: 92%;
+    }
+
+
+    .booking-card {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .booking-actions {
+
+        width: 100%;
+
+        justify-content: flex-end;
+
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .menu {
+
+        display: none;
+    }
+
+
+    .logo {
+
+        margin-right: 0;
+    }
+
+
+    .content {
+
+        width: 94%;
+
+        margin-top: 28px;
+    }
+
+
+    .content h1 {
+
+        font-size: 24px;
+    }
+
+
+    .booking-card {
+
+        padding: 17px;
+    }
+
+
+    .booking-actions {
+
+        justify-content: flex-start;
+    }
+
+
+    .message-btn {
+
+        min-width: 110px;
+    }
+
+
+    .rating-box {
+
+        padding: 25px 20px;
+    }
+
+
+    .star {
+
+        font-size: 34px;
+    }
+
+}

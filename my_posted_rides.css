@@ -1,0 +1,1492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    color: #172033;
+
+    background:
+        radial-gradient(
+            circle at 10% 5%,
+            rgba(37, 99, 235, 0.08),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #f8fbff 0%,
+            #f4f8fd 100%
+        );
+
+    min-height: 100vh;
+}
+
+
+.page {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 7%;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.96
+    );
+
+    border-bottom:
+        1px solid #e5edf7;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    backdrop-filter: blur(12px);
+}
+
+
+.logo {
+
+    color: #2563eb;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    letter-spacing: -0.3px;
+}
+
+
+.menu {
+
+    display: flex;
+
+    gap: 7px;
+
+    margin-left: 15%;
+}
+
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #475569;
+
+    padding: 8px 12px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    transition: 0.25s ease;
+}
+
+
+.menu a:hover {
+
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.menu .active {
+
+    color: #2563eb;
+
+    background: #dbeafe;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 4px 12px
+        rgba(37, 99, 235, 0.08);
+}
+
+
+.profile {
+
+    margin-left: auto;
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.profile:hover {
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+        0 7px 18px
+        rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.main {
+
+    width: 90%;
+
+    max-width: 1120px;
+
+    margin: auto;
+
+    padding:
+        50px 0 90px;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.page-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content:
+        space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+
+    animation:
+        fadeDown
+        0.5s ease;
+}
+
+
+.eyebrow {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+}
+
+
+.page-heading h1 {
+
+    font-size: 32px;
+
+    line-height: 1.1;
+
+    color: #172033;
+
+    letter-spacing:
+        -0.8px;
+
+    margin-bottom: 7px;
+}
+
+
+.subtitle {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    max-width: 650px;
+}
+
+
+/* =========================================
+   POST NEW RIDE
+   ========================================= */
+
+.new-ride-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        11px 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.new-ride-btn span {
+
+    font-size: 16px;
+
+    line-height: 1;
+}
+
+
+.new-ride-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 26px
+        rgba(37, 99, 235, 0.28);
+}
+
+
+/* =========================================
+   TABS
+   ========================================= */
+
+.tabs-wrap {
+
+    margin-bottom: 25px;
+}
+
+
+.tabs {
+
+    display: inline-flex;
+
+    gap: 4px;
+
+    padding: 5px;
+
+    background:
+        rgba(
+            231,
+            238,
+            248,
+            0.90
+        );
+
+    border-radius: 13px;
+}
+
+
+.tabs button {
+
+    border: none;
+
+    padding:
+        10px 22px;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.tabs button:hover {
+
+    color: #2563eb;
+
+    background: white;
+}
+
+
+.tabs button.active {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    font-weight: bold;
+
+    box-shadow:
+        0 6px 16px
+        rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   RIDE CARD
+   ========================================= */
+
+.ride-card {
+
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        23px 25px;
+
+    margin-bottom: 17px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.98
+        );
+
+    border:
+        1px solid #e1eaf4;
+
+    border-radius: 19px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(30, 64, 175, 0.055);
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    animation:
+        cardIn
+        0.5s ease forwards;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.ride-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #2563eb,
+            #60a5fa
+        );
+}
+
+
+.ride-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        #bfdbfe;
+
+    box-shadow:
+        0 18px 40px
+        rgba(37, 99, 235, 0.11);
+}
+
+
+/* =========================================
+   TOP
+   ========================================= */
+
+.ride-top {
+
+    display: flex;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   ROUTE
+   ========================================= */
+
+.route-section {
+
+    display: flex;
+
+    align-items: center;
+
+    min-width: 0;
+}
+
+
+.location-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #172033;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+.location-dot,
+.destination-dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    box-shadow:
+        0 0 0 4px
+        #eff6ff;
+}
+
+
+.destination-dot {
+
+    background: #0f766e;
+
+    box-shadow:
+        0 0 0 4px
+        #ccfbf1;
+}
+
+
+.route-line {
+
+    width: 50px;
+
+    margin:
+        0 12px;
+
+    border-top:
+        1px dashed #94a3b8;
+
+    position: relative;
+}
+
+
+.route-line::after {
+
+    content: "›";
+
+    position: absolute;
+
+    right: -3px;
+
+    top: -10px;
+
+    color: #94a3b8;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   STATUS
+   ========================================= */
+
+.ride-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+        7px 11px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+.ride-status span {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        currentColor;
+}
+
+
+.ride-status.upcoming {
+
+    color: #2563eb;
+
+    background: #eff6ff;
+}
+
+
+.ride-status.completed {
+
+    color: #15803d;
+
+    background: #f0fdf4;
+}
+
+
+.ride-status.cancelled {
+
+    color: #dc2626;
+
+    background: #fef2f2;
+}
+
+
+/* =========================================
+   DETAILS
+   ========================================= */
+
+.ride-middle {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    padding:
+        15px 0;
+
+    border-top:
+        1px solid #edf2f7;
+
+    border-bottom:
+        1px solid #edf2f7;
+}
+
+
+.ride-detail {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        8px 9px;
+
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+
+.ride-detail:hover {
+
+    background: #f8fbff;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.detail-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #f1f6ff;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    color: #2563eb;
+}
+
+
+.price-icon {
+
+    font-weight: bold;
+
+    color: #16a34a;
+
+    background: #f0fdf4;
+}
+
+
+.ride-detail small {
+
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
+}
+
+
+.ride-detail strong {
+
+    display: block;
+
+    color: #334155;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+.ride-detail em {
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-style: normal;
+}
+
+
+/* =========================================
+   BOTTOM
+   ========================================= */
+
+.ride-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-top: 16px;
+}
+
+
+.ride-tags {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+}
+
+
+.tag {
+
+    padding:
+        6px 10px;
+
+    border-radius: 8px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+.female-tag {
+
+    color: #be185d;
+
+    background: #fdf2f8;
+
+    border:
+        1px solid #fce7f3;
+}
+
+
+.normal-tag {
+
+    color: #475569;
+
+    background: #f1f5f9;
+}
+
+
+.seats-tag {
+
+    color: #047857;
+
+    background: #ecfdf5;
+
+    border:
+        1px solid #d1fae5;
+}
+
+
+/* =========================================
+   VEHICLE
+   ========================================= */
+
+.vehicle-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-left: auto;
+
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+
+.vehicle-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #e0edff
+        );
+
+    border-radius: 12px;
+
+    font-size: 22px;
+
+    transition: 0.3s ease;
+}
+
+
+.ride-card:hover
+.vehicle-icon {
+
+    transform:
+        translateY(-2px)
+        scale(1.07);
+
+    box-shadow:
+        0 6px 15px
+        rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================
+   ACTIONS
+   ========================================= */
+
+.ride-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.edit-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        9px 14px;
+
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border:
+        1px solid #dbeafe;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    transition: 0.25s ease;
+}
+
+
+.edit-btn:hover {
+
+    color: white;
+
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.cancel-btn {
+
+    padding:
+        9px 14px;
+
+    color: #dc2626;
+
+    background: white;
+
+    border:
+        1px solid #fecaca;
+
+    border-radius: 9px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.cancel-btn:hover {
+
+    color: white;
+
+    background: #dc2626;
+
+    border-color: #dc2626;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.no-action {
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    padding:
+        8px 10px;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   LOADING
+   ========================================= */
+
+.loading {
+
+    width: 100%;
+
+    padding:
+        55px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border:
+        1px solid #e1eaf4;
+
+    border-radius: 19px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+.loader {
+
+    width: 27px;
+
+    height: 27px;
+
+    margin:
+        0 auto 12px;
+
+    border:
+        3px solid #dbeafe;
+
+    border-top-color:
+        #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        spin
+        0.8s linear infinite;
+}
+
+
+/* =========================================
+   EMPTY
+   ========================================= */
+
+.no-rides {
+
+    padding:
+        60px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border:
+        1px dashed #cbd5e1;
+
+    border-radius: 19px;
+}
+
+
+.empty-icon {
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+
+.no-rides h3 {
+
+    color: #334155;
+
+    font-size: 15px;
+
+    margin-bottom: 6px;
+}
+
+
+.no-rides p {
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TOAST
+   ========================================= */
+
+.toast {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    min-width: 250px;
+
+    padding:
+        13px 17px;
+
+    color: white;
+
+    background: #172033;
+
+    border-radius: 11px;
+
+    font-size: 12px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.18);
+
+    opacity: 0;
+
+    transform:
+        translateY(20px);
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+
+    z-index: 999;
+}
+
+
+.toast.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+.toast.success {
+
+    background: #15803d;
+}
+
+
+.toast.error {
+
+    background: #dc2626;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-10px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes cardIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(14px)
+            scale(0.99);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    .menu {
+
+        margin-left: 7%;
+    }
+
+
+    .ride-middle {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .navbar {
+
+        height: auto;
+
+        min-height: 64px;
+
+        flex-wrap: wrap;
+
+        padding:
+            12px 5%;
+    }
+
+
+    .menu {
+
+        order: 3;
+
+        width: 100%;
+
+        margin-left: 0;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .profile {
+
+        margin-left: auto;
+    }
+
+
+    .main {
+
+        width: 92%;
+
+        padding-top: 35px;
+    }
+
+
+    .page-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 17px;
+    }
+
+
+    .new-ride-btn {
+
+        align-self: flex-start;
+    }
+
+
+    .ride-top {
+
+        flex-direction: column;
+    }
+
+
+    .ride-status {
+
+        align-self: flex-start;
+    }
+
+
+    .ride-bottom {
+
+        align-items:
+            flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .vehicle-section {
+
+        margin-left: 0;
+    }
+
+
+    .ride-actions {
+
+        width: 100%;
+    }
+
+
+    .edit-btn,
+    .cancel-btn {
+
+        flex: 1;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .menu {
+
+        gap: 3px;
+    }
+
+
+    .menu a {
+
+        font-size: 10px;
+
+        padding: 6px;
+    }
+
+
+    .main {
+
+        width: 94%;
+    }
+
+
+    .page-heading h1 {
+
+        font-size: 27px;
+    }
+
+
+    .tabs {
+
+        width: 100%;
+    }
+
+
+    .tabs button {
+
+        flex: 1;
+
+        padding:
+            10px 6px;
+    }
+
+
+    .ride-card {
+
+        padding:
+            19px;
+    }
+
+
+    .route-section {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap: 8px;
+    }
+
+
+    .route-line {
+
+        width: 1px;
+
+        height: 14px;
+
+        margin:
+            0 0 0 4px;
+
+        border-top: none;
+
+        border-left:
+            1px dashed #94a3b8;
+    }
+
+
+    .ride-middle {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .ride-detail {
+
+        background:
+            #f8fbff;
+    }
+
+}
+
+/* =========================================
+   COMPLETE RIDE BUTTON
+   ========================================= */
+
+.complete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 14px;
+
+    color: white;
+    background: #16a34a;
+
+    border: 1px solid #16a34a;
+    border-radius: 9px;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.complete-btn:hover {
+    background: #15803d;
+    border-color: #15803d;
+
+    transform: translateY(-1px);
+}
+
+.complete-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 750px) {
+
+    .complete-btn {
+        flex: 1;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Find Ride - RideNest</title>
+
+    <link
+        rel="stylesheet"
+        href="find_ride.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="profile_dropdown.css"
+    >
+
+    <script src="role_guard.js"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+    <div class="navbar-inner">
+
+        <div class="logo">
+            RideNest
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="main_page.html">
+                Home
+            </a>
+
+            <a
+                href="find_ride.html"
+                class="active"
+            >
+                Find Ride
+            </a>
+
+            <a href="post_ride.html">
+                Post Ride
+            </a>
+
+            <a href="My Rides.html">
+                My Rides
+            </a>
+
+            <a href="chat.html">
+                Chat
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+
+        <div class="profile-circle">
+            S
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<div class="main-container">
+
+
+    <!-- =================================================
+         LEFT SIDE
+    ================================================== -->
+
+    <div class="left-section">
+
+
+        <!-- =================================================
+             SEARCH BOX
+        ================================================== -->
+
+        <div class="search-box">
+
+
+            <h2>
+                Get a ride
+            </h2>
+
+
+
+            <!-- PICKUP -->
+
+            <label>
+                Pickup location
+            </label>
+
+
+            <div
+                id="pickupList"
+                class="location-list"
+            >
+            </div>
+
+
+            <button
+                type="button"
+                id="addPickup"
+                class="add-location"
+            >
+                + Add Pickup
+            </button>
+
+
+
+            <!-- DESTINATION -->
+
+            <label>
+                Destination
+            </label>
+
+
+            <div
+                id="destinationList"
+                class="location-list"
+            >
+            </div>
+
+
+            <button
+                type="button"
+                id="addDestination"
+                class="add-location"
+            >
+                + Add Destination
+            </button>
+
+
+
+            <!-- PICKUP TIME -->
+
+            <label>
+                Pickup time
+            </label>
+
+
+            <select id="pickupTime">
+
+                <option value="">
+                    Any time
+                </option>
+
+                <option value="06:00">
+                    06:00 AM
+                </option>
+
+                <option value="07:00">
+                    07:00 AM
+                </option>
+
+                <option value="08:00">
+                    08:00 AM
+                </option>
+
+                <option value="09:00">
+                    09:00 AM
+                </option>
+
+                <option value="10:00">
+                    10:00 AM
+                </option>
+
+                <option value="11:00">
+                    11:00 AM
+                </option>
+
+                <option value="12:00">
+                    12:00 PM
+                </option>
+
+                <option value="13:00">
+                    01:00 PM
+                </option>
+
+                <option value="14:00">
+                    02:00 PM
+                </option>
+
+                <option value="15:00">
+                    03:00 PM
+                </option>
+
+                <option value="16:00">
+                    04:00 PM
+                </option>
+
+                <option value="17:00">
+                    05:00 PM
+                </option>
+
+                <option value="18:00">
+                    06:00 PM
+                </option>
+
+                <option value="19:00">
+                    07:00 PM
+                </option>
+
+                <option value="20:00">
+                    08:00 PM
+                </option>
+
+                <option value="21:00">
+                    09:00 PM
+                </option>
+
+                <option value="22:00">
+                    10:00 PM
+                </option>
+
+            </select>
+
+
+
+            <!-- PASSENGERS -->
+
+            <label>
+                Passengers
+            </label>
+
+
+            <select id="passengers">
+
+                <option value="">
+                    Any
+                </option>
+
+                <option value="1">
+                    1 Passenger
+                </option>
+
+                <option value="2">
+                    2 Passengers
+                </option>
+
+                <option value="3">
+                    3 Passengers
+                </option>
+
+                <option value="4">
+                    4 Passengers
+                </option>
+
+            </select>
+
+
+
+            <!-- =================================================
+                 EXTRA TIP
+            ================================================== -->
+
+            <div class="tip-section">
+
+
+                <label>
+                    Extra Tip for Driver
+                </label>
+
+
+                <p class="tip-description">
+                    Want to give the driver a little extra?
+                </p>
+
+
+                <div class="tip-options">
+
+
+                    <label class="tip-option">
+
+                        <input
+                            type="radio"
+                            name="tipAmount"
+                            value="0"
+                            checked
+                        >
+
+                        <span>
+                            No Tip
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="tip-option">
+
+                        <input
+                            type="radio"
+                            name="tipAmount"
+                            value="10"
+                        >
+
+                        <span>
+                            ৳10
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="tip-option">
+
+                        <input
+                            type="radio"
+                            name="tipAmount"
+                            value="20"
+                        >
+
+                        <span>
+                            ৳20
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="tip-option">
+
+                        <input
+                            type="radio"
+                            name="tipAmount"
+                            value="30"
+                        >
+
+                        <span>
+                            ৳30
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="tip-option">
+
+                        <input
+                            type="radio"
+                            name="tipAmount"
+                            value="50"
+                        >
+
+                        <span>
+                            ৳50
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="tip-option">
+
+                        <input
+                            type="radio"
+                            name="tipAmount"
+                            value="100"
+                        >
+
+                        <span>
+                            ৳100
+                        </span>
+
+                    </label>
+
+
+
+                    <label class="tip-option custom-tip-option">
+
+                        <input
+                            type="radio"
+                            name="tipAmount"
+                            value="custom"
+                            id="customTipRadio"
+                        >
+
+                        <span>
+                            Custom
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- CUSTOM TIP -->
+
+                <div
+                    id="customTipBox"
+                    class="custom-tip-box"
+                    style="display: none;"
+                >
+
+                    <span>
+                        ৳
+                    </span>
+
+                    <input
+                        type="number"
+                        id="customTipAmount"
+                        min="1"
+                        max="10000"
+                        step="1"
+                        placeholder="Enter amount"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SEARCH BUTTON -->
+
+            <button
+                id="searchBtn"
+                class="search-btn"
+                type="button"
+            >
+                Search
+            </button>
+
+
+        </div>
+        <!-- =================================================
+             END SEARCH BOX
+        ================================================== -->
+
+
+
+        <!-- =================================================
+             INFO BOX
+        ================================================== -->
+
+        <div class="info-box">
+
+            <div class="info-icon">
+                ℹ️
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Find your ride
+                </h3>
+
+                <p>
+                    Search for available rides based on your
+                    pickup and destination.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- =================================================
+         END LEFT SECTION
+    ================================================== -->
+
+
+
+    <!-- =================================================
+         RIGHT SIDE
+    ================================================== -->
+
+    <div class="right-section">
+
+
+        <div class="rides-header">
+
+            <h2>
+                Available rides
+            </h2>
+
+            <span id="rideCount"></span>
+
+        </div>
+
+
+        <div
+            id="ridesContainer"
+            class="rides-container"
+        >
+
+            <div class="loading">
+                Loading rides...
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- =================================================
+         END RIGHT SECTION
+    ================================================== -->
+
+
+</div>
+<!-- =====================================================
+     END MAIN CONTAINER
+===================================================== -->
+
+
+
+<script src="find_ride.js"></script>
+
+<script src="profile_dropdown.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RideNest - Post Ride</title>
+
+    <link rel="stylesheet"
+          href="post_ride.css">
+<link rel="stylesheet" href="profile_dropdown.css">
+<script src="role_guard.js"></script>
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            RideNest
+        </div>
+
+
+        <div class="menu">
+
+            <a href="main_page.html">
+                Home
+            </a>
+
+            <a href="find_ride.html">
+                Find Ride
+            </a>
+
+            <a href="post_ride.html"
+               class="active">
+                Post Ride
+            </a>
+
+            <a href="My Rides.html">
+                My Rides
+            </a>
+
+            <a href="chat.html">
+                Chat
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+
+        <div class="profile">
+            S
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <div class="main">
+
+        <h1>
+            Post a ride
+        </h1>
+
+
+        <p class="subtitle">
+            Share your route with students and staff.
+        </p>
+
+
+
+        <form id="rideForm">
+
+
+            <div class="inputs">
+
+
+                <!-- Pickup -->
+
+                <input
+                    type="text"
+                    id="pickup"
+                    placeholder="Pickup"
+                >
+
+
+                <!-- Destination -->
+
+                <input
+                    type="text"
+                    id="destination"
+                    placeholder="Destination"
+                >
+
+
+                <!-- Pickup checkpoint -->
+
+                <input
+                    type="text"
+                    id="pickupCheckpoint"
+                    placeholder="Pickup checkpoints"
+                >
+
+
+                <!-- Drop checkpoint -->
+
+                <input
+                    type="text"
+                    id="dropCheckpoint"
+                    placeholder="Drop checkpoints"
+                >
+
+
+                <!-- Date -->
+
+                <input
+                    type="date"
+                    id="date"
+                >
+
+
+                <!-- Time -->
+
+                <input
+                    type="time"
+                    id="time"
+                >
+
+
+                <!-- Available seats -->
+
+                <input
+                    type="number"
+                    id="seats"
+                    placeholder="Available seats"
+                    min="1"
+                >
+
+
+                <!-- Vehicle -->
+
+                <input
+                    type="text"
+                    id="vehicle"
+                    placeholder="Vehicle"
+                >
+
+
+                <!-- PRICE -->
+
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="Price per seat (৳)"
+                    min="0"
+                    step="0.01"
+                >
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 OPTIONS
+            ========================================== -->
+
+            <div class="options">
+
+
+                <!-- Female only -->
+
+                <label class="female">
+
+                    <input
+                        type="checkbox"
+                        id="femaleOnly"
+                    >
+
+                    <b>
+                        Female Only
+                    </b>
+
+                    <small>
+                        Offer this ride only to female passengers
+                    </small>
+
+                </label>
+
+
+
+                <!-- Recurring -->
+
+                <label class="recurring">
+
+                    <input
+                        type="checkbox"
+                        id="recurring"
+                    >
+
+                    <b>
+                        Recurring Ride
+                    </b>
+
+                    <small>
+                        Repeat this route on selected days
+                    </small>
+
+                </label>
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 SUBMIT
+            ========================================== -->
+
+            <button
+                class="post"
+                type="submit"
+            >
+                Post Ride
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script src="post_ride.js"></script>
+<script src="profile_dropdown.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Ride Details - RideNest
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="ride_details.css"
+    >
+
+
+    <script>
+
+        fetch("session_check.php")
+
+        .then(function (response) {
+
+            return response.json();
+
+        })
+
+        .then(function (data) {
+
+            if (!data.loggedIn) {
+
+                window.location.href =
+                    "login.html";
+
+                return;
+
+            }
+
+
+            if (data.role === "driver") {
+
+                window.location.href =
+                    "my_posted_rides.html";
+
+                return;
+
+            }
+
+
+            if (data.role === "admin") {
+
+                window.location.href =
+                    "admin_dashboard.php";
+
+                return;
+
+            }
+
+        })
+
+        .catch(function (error) {
+
+            console.log(error);
+
+            window.location.href =
+                "login.html";
+
+        });
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+<div class="full-screen">
+
+
+    <!-- =========================================
+         NAVBAR
+         ========================================= -->
+
+    <div class="navbar">
+
+
+        <div class="logo">
+            RideNest
+        </div>
+
+
+        <div class="menu">
+
+            <a href="main_page.html">
+                Home
+            </a>
+
+            <a href="find_ride.html">
+                Find Ride
+            </a>
+
+            <a href="post_ride.html">
+                Post Ride
+            </a>
+
+            <a href="My Rides.html">
+                My Rides
+            </a>
+
+            <a href="chat.html">
+                Chat
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+
+        <div class="auth">
+
+            <a
+                href="login.html"
+                class="login"
+            >
+                Login
+            </a>
+
+
+            <a
+                href="registration.html"
+                class="signup"
+            >
+                Sign up
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         MAIN
+         ========================================= -->
+
+    <div class="main-body">
+
+
+        <h1>
+            Ride details
+        </h1>
+
+
+        <p class="subtitle">
+
+            Review the route, checkpoints,
+            driver, and vehicle before booking.
+
+        </p>
+
+
+
+        <div class="main">
+
+
+            <!-- =====================================
+                 LEFT
+                 ===================================== -->
+
+            <div class="left">
+
+
+                <div class="items blue">
+
+                    <h3>
+                        Route overview
+                    </h3>
+
+
+                    <p>
+                        Pickup:
+                        Loading...
+                    </p>
+
+
+                    <p>
+                        Destination:
+                        Loading...
+                    </p>
+
+                </div>
+
+
+
+                <div class="items">
+
+                    <h3>
+                        Pickup checkpoints
+                    </h3>
+
+
+                    <p>
+                        Loading...
+                    </p>
+
+                </div>
+
+
+
+                <div class="items blue">
+
+                    <h3>
+                        Drop checkpoints
+                    </h3>
+
+
+                    <p>
+                        Loading...
+                    </p>
+
+                </div>
+
+
+
+                <div class="items">
+
+                    <h3>
+                        Schedule & seats
+                    </h3>
+
+
+                    <p>
+                        Loading...
+                    </p>
+
+
+                    <p>
+                        Loading...
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 RIGHT
+                 ===================================== -->
+
+            <div class="right">
+
+
+                <!-- DRIVER CARD -->
+
+                <div class="driver">
+
+
+                    <div class="driver-info">
+
+
+                        <h2 id="driverName">
+                            Loading...
+                        </h2>
+
+
+                        <p
+                            class="rating"
+                            id="driverRating"
+                        >
+                            ★ No ratings yet
+                        </p>
+
+
+                        <p id="vehicleInfo">
+                            Loading...
+                        </p>
+
+
+                        <a
+                            href="#"
+                            id="viewDriverProfile"
+                            class="view-driver-profile"
+                        >
+                            View Driver Profile
+                        </a>
+
+
+                    </div>
+
+
+                    <img
+                        src="profile.png"
+                        class="profile"
+                        alt="Driver"
+                    >
+
+
+                </div>
+
+
+
+                <!-- SAFETY -->
+
+                <div class="safety">
+
+
+                    <h3>
+                        Safety
+                    </h3>
+
+
+                    <p>
+                        Verified university member
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- BOOK -->
+
+                <button
+                    class="book"
+                    type="button"
+                    onclick="bookRide()"
+                >
+                    Book Ride
+                </button>
+
+
+
+                <!-- MESSAGE -->
+
+                <a
+                    href="chat.html"
+                    class="message"
+                >
+                    Message Driver
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="ride_details.js"></script>
+
+
+</body>
+
+</html>

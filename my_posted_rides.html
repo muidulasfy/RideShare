@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RideNest - My Posted Rides</title>
+
+
+    <link
+        rel="stylesheet"
+        href="my_posted_rides.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="profile_dropdown.css"
+    >
+
+
+    <script>
+
+        fetch("session_check.php")
+
+            .then(response =>
+                response.json()
+            )
+
+            .then(data => {
+
+                if (!data.loggedIn) {
+
+                    window.location.href =
+                        "login.html";
+                }
+
+            })
+
+            .catch(() => {
+
+                window.location.href =
+                    "login.html";
+
+            });
+
+    </script>
+
+</head>
+
+
+<body>
+
+<div class="page">
+
+
+    <!-- ==============================
+         NAVBAR
+    =============================== -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            RideNest
+        </div>
+
+
+        <div class="menu">
+
+            <a href="main_page.html">
+                Home
+            </a>
+
+            <a href="find_ride.html">
+                Find Ride
+            </a>
+
+            <a href="post_ride.html">
+                Post Ride
+            </a>
+
+            <a
+                href="my_posted_rides.html"
+                class="active"
+            >
+                My Rides
+            </a>
+
+            <a href="chat.html">
+                Chat
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+
+        <div class="profile">
+            S
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         MAIN
+    =============================== -->
+
+    <main class="main">
+
+
+        <section class="page-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    DRIVER DASHBOARD
+                </span>
+
+
+                <h1>
+                    My posted rides
+                </h1>
+
+
+                <p class="subtitle">
+
+                    Manage your upcoming rides,
+                    complete finished trips,
+                    and keep your schedule organized.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="post_ride.html"
+                class="new-ride-btn"
+            >
+
+                <span>
+                    +
+                </span>
+
+                Post New Ride
+
+            </a>
+
+        </section>
+
+
+        <!-- ==============================
+             TABS
+        =============================== -->
+
+        <div class="tabs-wrap">
+
+            <div class="tabs">
+
+                <button
+                    type="button"
+                    id="upcomingBtn"
+                    class="active"
+                >
+                    Upcoming
+                </button>
+
+
+                <button
+                    type="button"
+                    id="completedBtn"
+                >
+                    Completed
+                </button>
+
+
+                <button
+                    type="button"
+                    id="cancelledBtn"
+                >
+                    Cancelled
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==============================
+             RIDES
+        =============================== -->
+
+        <section class="ride-section">
+
+            <div id="ridesContainer">
+
+                <div class="loading">
+
+                    <div class="loader"></div>
+
+                    Loading your rides...
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    id="toast"
+    class="toast"
+></div>
+
+
+<script src="my_posted_rides.js"></script>
+
+<script src="profile_dropdown.js"></script>
+
+
+</body>
+
+</html>

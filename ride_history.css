@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    color: #202b40;
+}
+
+.navbar {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+}
+
+.logo {
+    color: #2563eb;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    margin-left: 19%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #334155;
+    background-color: #f1f5f9;
+    padding: 4px 9px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px #aaa;
+    font-size: 11px;
+}
+
+.menu .active {
+    background-color: #dbeafe;
+}
+
+.profile {
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.main {
+    padding: 38px 4.5%;
+}
+
+h1 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.filters button {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 9px;
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.filters .all {
+    background-color: #2563eb;
+    color: white;
+}
+
+.ride {
+    width: 95%;
+    height: 106px;
+    padding: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #dce3eb;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 3px 3px #aaa;
+}
+
+.blue {
+    background-color: #eaf4ff;
+}
+
+.ride b {
+    font-size: 13px;
+}
+
+.ride p {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 9px;
+}
+
+.ride i {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.delete {
+    color: #2563eb;
+    background: none;
+    border: none;
+    font-size: 30px;
+    margin-right: 45px;
+}
